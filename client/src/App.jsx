@@ -4,7 +4,11 @@ function App() {
 
   return (
     <>
-      <div> test </div>
+      <div className="bg-red-500 font-extrabold text-3xl"> test Mode </div>
+      <h1 className="">
+      Hello world!
+    </h1>
+
     </>
   )
 }
