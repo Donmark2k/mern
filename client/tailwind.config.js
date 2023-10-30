@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         orange: '#F5385D',
+        primary: '#F5385D',
       }
     },
   },
