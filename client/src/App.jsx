@@ -4,14 +4,19 @@ import {Routes, Route} from 'react-router-dom'
 import LoginPage from './components/loginPage'
 import Layout from './components/layout';
 import RegisterPage from './components/register';
+import axios from "axios";
+import { UserContextProvider } from './components/userContext';
 
+
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
+axios.defaults.withCredentials = true;
 
 function App() {
 
   return (
     <div className="App">
       {/* < IndexPage /> */}
-
+    <UserContextProvider>
     <Routes>
       <Route path="" element={<Layout />}>
 
@@ -22,6 +27,7 @@ function App() {
       </Route>
 
     </Routes>
+    </UserContextProvider>
     </div>
 
   )
